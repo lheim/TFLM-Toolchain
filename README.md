@@ -1,6 +1,6 @@
 # Measuring what Really Matters: Optimizing Neural Networks for TinyML - Toolchain
 
-This repository contains multiple Jupyter notebooks which were used for the implementation part of the paper *Measuring what Really Matters: Optimizing Neural Networks for TinyML*.
+This repository contains multiple Jupyter notebooks which were used for the implementation part of the paper *[Measuring what Really Matters: Optimizing Neural Networks for TinyML](https://arxiv.org/abs/2104.10645)*.
 
 ## Abstract
 
