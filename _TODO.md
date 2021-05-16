@@ -1,0 +1,2 @@
+- add option to run the toolchain without the rocketlogger, especially all auto
+- check things

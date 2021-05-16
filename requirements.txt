@@ -1,0 +1,16 @@
+flatbuffers
+ipywidgets
+jupyterlab
+matplotlib
+mbed-cli
+numpy
+pandas
+pyserial
+tensorflow==2.2
+tensorflow-model-optimization==0.3.0
+pyperclip
+seaborn
+rocketlogger
+ipympl
+tikzplotlib
+keras-flops

@@ -1,0 +1,7 @@
+TFLu_benchmark-model*
+.ipynb_checkpoints/
+*benchmark*.tflite
+*benchmark*.h5
+*.rld
+figures/
+_TODO

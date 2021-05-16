@@ -1,0 +1,51 @@
+Model: "sequential_2"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_4 (Conv2D)            (None, 30, 30, 6)         60        
+_________________________________________________________________
+average_pooling2d_4 (Average (None, 15, 15, 6)         0         
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 13, 13, 16)        880       
+_________________________________________________________________
+average_pooling2d_5 (Average (None, 6, 6, 16)          0         
+_________________________________________________________________
+flatten_2 (Flatten)          (None, 576)               0         
+_________________________________________________________________
+dense_6 (Dense)              (None, 120)               69240     
+_________________________________________________________________
+dense_7 (Dense)              (None, 84)                10164     
+_________________________________________________________________
+dense_8 (Dense)              (None, 10)                850       
+=================================================================
+Total params: 81,194
+Trainable params: 81,194
+Non-trainable params: 0
+_________________________________________________________________
+
+
+def create_model(my_learning_rate):
+    
+    model = tf.keras.models.Sequential()
+    
+    model.add(layers.Conv2D(filters=6, kernel_size=(3, 3), activation='relu', input_shape=(32,32,1)))
+    model.add(layers.AveragePooling2D())
+    
+    model.add(layers.Conv2D(filters=16, kernel_size=(3, 3), activation='relu'))
+    model.add(layers.AveragePooling2D())
+    
+    model.add(layers.Flatten())
+    
+    model.add(layers.Dense(units=120, activation='relu'))
+    
+    model.add(layers.Dense(units=84, activation='relu'))
+    
+    model.add(layers.Dense(units=10, activation='softmax'))
+    
+    model.compile(optimizer=tf.keras.optimizers.Adam(lr=my_learning_rate),
+                 loss="categorical_crossentropy",
+                 metrics=['accuracy'])
+    
+    model.summary()
+    
+    return model
